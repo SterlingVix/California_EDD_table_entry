@@ -1,8 +1,8 @@
- /**
-  * Bookmarklet by Aaron Melocik
-  * https://github.com/SterlingVix
-  **/
-var customPastableInput = '<div class="modal-container" style="box-sizing: border-box; margin: 1em; background-color: white; width: calc(100% - 2em); position: fixed; top: 0px; padding: 0.25em; border-radius: 1em; text-align: center;"> <p style="text-align: center; font-size: 1.5em;">Paste spreadsheet data here (must contain 12 cells):</p> <textarea name="spreadsheet_data" class="input-paste-area" style="width: 90%; height: 2em; margin: 0px 5%;"></textarea> <br /> <div style="width: 100%"> <button id="custom-populate-button" style="margin: 1em auto; font-size: 1.5em;">Populate Now</button> </div> </div> ';
+/**
+ * Bookmarklet by Aaron Melocik
+ * https://github.com/SterlingVix
+ **/
+var customPastableInput = '<div class="modal-container" style="z-index: 2; box-sizing: border-box; margin: 1em; background-color: white; width: calc(100% - 2em); position: fixed; top: 0px; padding: 0.25em; border-radius: 1em; text-align: center;"> <p style="text-align: center; font-size: 1.5em;">Paste spreadsheet data here (must contain 12 cells):</p> <textarea name="spreadsheet_data" class="input-paste-area" style="width: 90%; height: 2em; margin: 0px 5%;"></textarea> <br /> <div style="width: 100%"> <button id="custom-populate-button" style="margin: 1em auto; font-size: 1.5em;">Populate Now</button> </div> </div> ';
 window.newDiv = document.createElement('div');
 window.newDiv.innerHTML = customPastableInput;
 document.body.appendChild(window.newDiv);
@@ -10,7 +10,6 @@ window.setTimeout(function () {
     var populateButton = document.querySelector('button#custom-populate-button');
     window.customTextInputArea = document.querySelector('textarea.input-paste-area');
     window.customTextInputArea.focus();
-
     populateButton.addEventListener('click', function (event) {
         var pageInputs = document.querySelectorAll('input.TextBox');
         window.customTextInputArea = document.querySelector('textarea.input-paste-area');
@@ -42,4 +41,4 @@ window.setTimeout(function () {
         additionalWorkRecordsRadioButton.click();
         document.body.removeChild(window.newDiv);
     }); /* end populate button click handler */
-}, 400);
+}, 200);
