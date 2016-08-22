@@ -1,4 +1,13 @@
 # California EDD table entry
+
+## UPDATE 8/22/2016
+
+Of course, within 2 weeks of pushing this repo it looks like the EDD has updated their interface, making this temporarily obsolete.
+
+If it seems useful I will update this repo and remove this notice. If you actually want me to push ahead on this, please message me with the request to work on this, and I'll try to move it up the queue. Thanks!
+
+## Original README.md:
+
 You're between jobs. I've been there. If you're lucky enough to live in California, you may have access to Unemployment Insurance through California's Employment Development Department, here:
 
 [California EDD UI Online][eddui]
